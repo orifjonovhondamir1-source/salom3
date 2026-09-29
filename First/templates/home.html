@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  </head>
+<style>
+  h1{
+    cursor: n;
+  }
+</style>
+  <body>
+<div class="flex justify-center mtzz ">    {% for uzbek in uzbek%}
+  {% if uzbek.is_sotulda%}
+  <div class="w-[232px] h-[455px] ml-[50px]"> 
+    <img class="w-[232px] h-[309px] rounded-[10px]" src="{{uzbek.img.url}}" alt="">
+    <div class="w-[232px] h-[156px] ml-[5px]"><h1 class="text-[14px] font-semibold text-[#7f4dff] flex">{{uzbek.sikidka}} <img class="w-[14px] h-[14px] mt-[4px]" src="https://static.uzum.uz/uzum_card_discount.png" alt=""></h1>
+    <h1 class="text-[12px] font-semibold text-[#7e818c]">{{uzbek.narxi}}</h1>
+<div class="w-[97px] h-[18px] bg-[#ffff00] rounded-[4px] pl-[6px] mt-[5px]"><h1 class="text-[11px]">7947 so'm/oyiga</h1></div>
+<p class="text-[12px] w-[224px] mt-[5px]">{{uzbek.izoh}}</p>
+    <h1 class="text-[12px] mt-[5px]">⭐
+        5.0
+        (3 sharhlar)</h1>
+    <div class="w-[224px] h-[32px] text-[#fff] text-[14px] bg-[#7000ff] rounded-[6px] pl-[75px] pt-[3.5px] mt-[10px]"><h1><i class="fa-solid fa-bag-shopping"></i>Ertaga</h1> </div>
+</div>
+{%if uzbek.is_arzon%}
+<div class="w-[104px] h-[16px] bg-[#ff4499] rounded-[3px] text-[10px] text-[#fff] pl-[8px] ml-[108px] absolute top-[290px]"><h1>Arzon Narxi Kafolati</h1></div>
+{%endif%}
+{% if uzbek.is_bozor%}
+<div class="w-[104px] h-[16px] bg-[#81ffe2] rounded-[3px] text-[10px]  pl-[8px] ml-[px] absolute top-[290px]"><h1>BOZORDAN ARZON</h1></div>
+{% endif%}
+<div class="bg-[ffffff80] w-[24px] h-[24px] ml-[200px] absolute top-[5px]"><h1><i class="fa-regular fa-heart"></i></h1></div>
+{%  if uzbek.is_sotildi%}
+<div class="w-[232px] h-[455px] cursor-no-drop absolute top-[1px]"></div>
+
+{%endif%}
+</div>
+
+{% endif%}
+
+  {%endfor%}</div>
+  </body>
+</html>

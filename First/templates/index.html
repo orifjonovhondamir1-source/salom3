@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+  </head>
+
+  <body>
+{% for ttm in ttm%}
+<div class="flex"><img class="w-[580px] h-[632px] rounded-[50px] ml-[200px] mt-[75px] " src="https://assets.nicepagecdn.com/11a8ddce/4460241/images/house-isolated-field1.jpg" alt="">
+    <div class="w-[580px] h-[632px] rounded-[50px] bg-[#fbeced] pt-[80px] ml-[35px]  mt-[75px]"><img class="w-[33px] h-[33px] ml-[250px] " src="{{ttm.img1.url}}" alt="">
+    <p class="text-[18px] w-[416px] text-center ml-[60px] mt-[10px]">{{ttm.ismi}}Enim nunc</p><h1 class="text-[20px] ml-[210px] font-bold mt-[10px]">{{ttm.yoshi}}</h1>
+    <div>
+      <img class="w-[33px] h-[33px] ml-[250px] mt-[50px]" src="{{ttm.img1.url}}" alt="">
+            <p class="text-[18px] w-[416px]  text-center ml-[60px] mt-[10px]">{{ttm.ismi}}</p>
+            <h1 class="text-[20px] ml-[210px] font-bold mt-[10px]">{{ttm.ishi}}</h1></div></div></div>
+{%endfor%}
+  </body>
+</html>

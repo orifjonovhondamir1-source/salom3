@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+<style>
+    i{
+        margin-left: 1420px;
+    }
+</style>
+<body> 
+
+    <nav class="h-[80px] pt-[20px] text-[24px] flex"> 
+        <img class="w-[64px] h-[32px]" src="https://capp.nicepage.com/e8aea34c53e32eda0e6ff0dc1d10415780087a6e/images/default-logo.png" alt="">
+        <i class="fa-solid fa-bars"></i></nav>
+    
+    <div class="w-[1524px] h-[568px] bg-zinc-600  pt-[50px]">
+        <h1 class="text-[68px] ml-[450px] text-white font-bold ">Building Company</h1>
+        <p class="text-[22.5px]  ml-[320px] text-white font-bold">From renovations and room additions to masonry and other handyman services</p>
+    </div>
+    <div class="w-[1524px] h-[290px] bg-[#f1c50e]"></div>
+    <img class="w-[1524px] h-[590px]" src="https://images03.nicepage.com/c461c07a441a5d220e8feb1a/8bc12c671b9d563f8ec408d8/pexels-photo-5990678.jpeg" alt="">
+
+
+
+
+  
+    
+   
+
+
+  
+
+
+
+  
+    
+    <div class="absolute top-[300px] ml-[100px] flex w-[1140px]  flex-wrap ">
+        {%for salom in salom %}
+{% if salom.div%}
+<div class="w-[271px] h-[452px] bg-white rounded-[25px] pt-[20px] ml-[50px] pl-[36px] text-center ">
+    <img class="w-[189px] h-[190px] rounded-[15px] ml-[0px]" src="{{salom.logo.url}}" alt="">
+    <h1 class="text-[23px] ml-[px] mt-[10px]">{{salom.name}}<h1>
+    <p class="w-[207.5px] text-[16px] text-[#808080] text-center ml-[px] mt-[10px]">{{salom.mean}}</p>
+<h2 class="text-[18px] ml-[0px] mt-[20px]">MORE  </h2>
+
+
+
+</div>
+
+
+     {% endif%}
+    
+        {%endfor%} 
+
+ 
+        
+          
+        
+    <div class="absolute top-[1350px]">
+        <h1 class=" text-[20px] ml-[680px] text-[#fff]">Images fromFreepik </h1> </h1>
+        <div class="w-[219px] h-[66px] text-white border-2 border-white rounded-[15px] pl-[45px] pt-[10px] ml-[665px] mt-[40px]">
+            <h1 class="text-[27px]">view more</h1></div>
+            </div>
+</div>
+
+
+
+
+</body>
+</html>

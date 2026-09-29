@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="flex flex-wrap gap-4 justify-center ml-[200px]"> 
+        {% for mahsulot in mahsulot %}
+            
+    
+            <div class="w-[232px] h-[480px] relative border border-gray-100 rounded-[10px] overflow-hidden group"> 
+                
+                    <img class="w-[232px] h-[309px] rounded-[10px] object-cover" src="{{ mahsulot.rasm.url }}" alt="{{ mahsulot.nomi }}">
+             
+                    <div class="w-[232px] h-[309px] bg-gray-200 flex items-center justify-center rounded-[10px]"><h1>{{mahsulot.reyting}}</h1></div>
+
+    
+                <div class="w-[232px] h-[156px] ml-[5px] mt-[5px]">
+                    
+                    <h2 class="text-[14px] font-medium text-[#1f2026] truncate w-[220px]" title="{{ mahsulot.nomi }}">
+                        {{ mahsulot.nomi }}
+                    </h2>
+    
+                    <h1 class="text-[12px] mt-[3px] text-[#7e818c] flex items-center gap-1">
+                        ⭐ {{ mahsulot.reyting }} (3 sharhlar)
+                    </h1>
+                    
+                    <div class="w-[110px] h-[18px] bg-[#ffff00] rounded-[4px] pl-[6px] mt-[5px]">
+                        <h1 class="text-[11px] font-semibold text-[#1f2026]">{{mahsulot.tugilgan_sana}}</h1>
+                    </div>
+    
+                    <p class="text-[12px] w-[224px] mt-[5px] text-[#24173d] truncate">{{ mahsulot.izoh }}</p>
+                    
+                    <h1 class="text-[14px] font-bold text-[#1f2026] mt-[5px]">{{ mahsulot.narxi }} so'm</h1>
+    
+                    <div class="w-[224px] h-[32px] text-[#fff] text-[14px] bg-[#7000ff] rounded-[6px] flex items-center justify-center gap-2 mt-[10px] cursor-pointer hover:bg-[#5b00d6] transition">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span>{{mahsulot.ip_manzil}}</span> 
+                    </div>
+                </div>
+    
+                    <div class="w-[104px] h-[16px] bg-[#ff4499] rounded-[3px] text-[10px] text-[#fff] flex items-center justify-center absolute top-[285px] left-[120px]">
+                        <h1>{{mahsulot.json_data}}</h1>
+                    </div>
+        
+    
+                <div class="bg-[#ffffff80] w-[28px] h-[28px] flex items-center justify-center rounded-full absolute top-[10px] right-[10px] cursor-pointer hover:bg-white transition shadow-sm">
+                    <h1><i class="fa-regular fa-heart text-[#1f2026]"></i></h1>
+                </div>
+              <div class="w-[232px] h-[480px] bg-black/10 cursor-no-drop absolute top-0 left-0 flex items-center justify-center">
+                        <span class="bg-black/70 text-white px-2 py-1 rounded text-xs">Sotildi</span>
+                        <h1>{{mahsulot.manfiy_bolmagan}}</h1>
+                        <h1>{{mahsulot.izoh}}</h1>
+                        <h1> {{mahsulot.email}}</h1>
+                        <h1>{{mahsulot.sayt}}</h1>
+                        <h1>{{mahsulot.telefon}}</h1>
+                        <h1>{{mahsulot.slug}}</h1>
+                     <img src="{{mahsulot.fayl.url}}" alt="">
+                     <h1>{{mahsulot.yaratilgan_vaqt}}</h1>
+                    </div>
+        
+    
+            </div>
+           
+        {% endfor %}
+    </div>
+</body>
+</html>
